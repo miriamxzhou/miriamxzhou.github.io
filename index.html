@@ -20,14 +20,14 @@ img{max-width:100%}
 :root{
   --bg:#fdfcf8;
   --surface:#fffefa;
-  --ink:#24324a;
-  --muted:#66708a;
+  --ink:#1e2c44;
+  --muted:#555e74;
   --rule:#e4dccb;
-  --accent:#3e5f8f;
+  --accent:#355687;
   --accent-soft:#e2e9f3;
   --sun:#f3d98b;
-  --sun-soft:#fcf5e0;
-  --sun-ink:#6e5413;
+  --sun-soft:#fbf6e7;
+  --sun-ink:#3d3a28;
   --mark:#f3d98b;
   --f-display:"Fraunces", "Iowan Old Style", Georgia, serif;
   --f-body:"Lora", Georgia, "Times New Roman", serif;
@@ -76,7 +76,7 @@ h1 span{background:linear-gradient(transparent 62%,var(--mark) 62%,var(--mark) 9
 .btn.primary:hover{color:var(--bg);filter:brightness(1.08)}
 .email{font-family:var(--f-mono);font-size:var(--s-sm);color:var(--ink);user-select:all}
 
-.figure{margin:0}
+.figure{margin:0;max-width:300px;justify-self:end}
 .portrait{width:100%;max-width:100%;aspect-ratio:640/655;object-fit:cover;display:block;border-radius:4px;border:10px solid var(--surface);box-shadow:0 0 0 1px var(--rule),8px 8px 0 var(--sun-soft);background:var(--accent-soft);filter:saturate(.9) sepia(.08)}.figure figcaption{font-family:var(--f-mono);font-size:var(--s-xs);color:var(--muted);margin-top:10px}
 .interests{list-style:none;margin:0 0 24px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .interests li{font-family:var(--f-body);font-size:var(--s-sm);padding:3px 12px;border-radius:999px;background:var(--sun-soft);color:var(--sun-ink);border:1px solid var(--sun)}
@@ -139,7 +139,7 @@ footer{font-family:var(--f-mono);font-size:var(--s-xs);color:var(--muted);paddin
 <body>
 <nav class="top" aria-label="Sections">
   <div class="wrap">
-    <a class="brand" href="#top">MZ</a>
+    <a class="brand" href="#top">Miriam Zhou</a>
     <ul>
       <li><a href="#news">News</a></li>
       <li><a href="#research">Research</a></li>
