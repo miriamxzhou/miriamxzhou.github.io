@@ -18,17 +18,17 @@ html,body{margin:0}
 img{max-width:100%}
 /* Layout: one reading column with a margin rail for dates; hero pairs the name and research focus with a portrait. */
 :root{
-  --bg:#ecf1fa;
-  --surface:#fffefa;
-  --ink:#1e2c44;
-  --muted:#555e74;
-  --rule:#faf3e5;
-  --accent:#355687;
-  --accent-soft:#e2e9f3;
-  --sun:#f7e09b;
-  --sun-soft:#fbf6e7;
-  --sun-ink:#3d3a28;
-  --mark:#f3d98b;
+  --bg:#eef5fd;
+  --surface:#ffffff;
+  --ink:#16294a;
+  --muted:#4f6283;
+  --rule:#d3e2f4;
+  --accent:#2f6fd0;
+  --accent-soft:#dceafb;
+  --sun:#ffe08a;
+  --sun-soft:#fff6d6;
+  --sun-ink:#5c4708;
+  --mark:#ffe28f;
   --f-display:"Fraunces", "Iowan Old Style", Georgia, serif;
   --f-body:"Lora", Georgia, "Times New Roman", serif;
   --f-mono:"Courier Prime", "Courier New", ui-monospace, monospace;
@@ -36,13 +36,13 @@ img{max-width:100%}
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#18222f; --surface:#1f2b3b; --ink:#f1ead8; --muted:#aab2c2; --rule:#314055;
-    --accent:#a9c1e4; --accent-soft:#273a54; --sun:#e5c86f; --sun-soft:#3b3424; --sun-ink:#f2d98a; --mark:#6a5824; color-scheme:dark;
+    --bg:#0f1b2e; --surface:#16253d; --ink:#eaf2ff; --muted:#a3b4cf; --rule:#26385a;
+    --accent:#8cb8ff; --accent-soft:#1c3256; --sun:#f2cf63; --sun-soft:#3a3320; --sun-ink:#ffe08a; --mark:#6b5a1f; color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#18222f; --surface:#1f2b3b; --ink:#f1ead8; --muted:#aab2c2; --rule:#314055;
-  --accent:#a9c1e4; --accent-soft:#273a54; --sun:#e5c86f; --sun-soft:#3b3424; --sun-ink:#f2d98a; --mark:#6a5824; color-scheme:dark;
+  --bg:#0f1b2e; --surface:#16253d; --ink:#eaf2ff; --muted:#a3b4cf; --rule:#26385a;
+  --accent:#8cb8ff; --accent-soft:#1c3256; --sun:#f2cf63; --sun-soft:#3a3320; --sun-ink:#ffe08a; --mark:#6b5a1f; color-scheme:dark;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -71,12 +71,12 @@ h1 span{background:linear-gradient(transparent 62%,var(--mark) 62%,var(--mark) 9
 .links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .btn{font-family:var(--f-body);font-size:var(--s-sm);font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
 .btn:hover{border-color:var(--accent);color:var(--accent)}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--surface)}
 .btn.primary:hover{color:var(--bg);filter:brightness(1.08)}
 .email{font-family:var(--f-mono);font-size:var(--s-sm);color:var(--ink);user-select:all}
 
 .figure{margin:0;max-width:300px;justify-self:end}
-.portrait{width:100%;max-width:100%;aspect-ratio:640/655;object-fit:cover;display:block;border-radius:4px;border:10px solid var(--surface);box-shadow:0 0 0 1px var(--rule),8px 8px 0 var(--sun-soft);background:var(--accent-soft);filter:saturate(.9) sepia(.08)}.figure figcaption{font-family:var(--f-mono);font-size:var(--s-xs);color:var(--muted);margin-top:10px}
+.portrait{width:100%;max-width:100%;aspect-ratio:640/655;object-fit:cover;display:block;border-radius:4px;border:10px solid var(--surface);box-shadow:0 0 0 1px var(--rule),8px 8px 0 var(--sun);background:var(--accent-soft)}.figure figcaption{font-family:var(--f-mono);font-size:var(--s-xs);color:var(--muted);margin-top:10px}
 .interests{list-style:none;margin:0 0 24px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .interests li{font-family:var(--f-body);font-size:var(--s-sm);padding:3px 12px;border-radius:999px;background:var(--sun-soft);color:var(--sun-ink);border:1px solid var(--sun)}
 /* sections */
@@ -94,7 +94,7 @@ h3{font-family:var(--f-display);font-weight:600;font-size:var(--s-lg);letter-spa
 /* research themes */
 .theme{margin-bottom:36px}
 .theme:last-child{margin-bottom:0}
-.theme-label{font-family:var(--f-mono);font-size:var(--s-xs);text-transform:uppercase;letter-spacing:.07em;color:var(--accent);margin:0 0 16px;padding-bottom:8px;border-bottom:1px dashed var(--rule)}
+.theme-label{font-family:var(--f-mono);font-size:var(--s-xs);text-transform:uppercase;letter-spacing:.07em;color:var(--accent);margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid var(--sun)}
 .project{display:grid;grid-template-columns:8.5rem minmax(0,1fr);gap:20px;padding-block:14px}
 .project + .project{border-top:1px solid var(--rule)}
 .project p{margin:6px 0 0;max-width:40em}
