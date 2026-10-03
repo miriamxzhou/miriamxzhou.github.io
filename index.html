@@ -12,34 +12,37 @@
 <link rel="icon" href="images/photo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,500,100;0,9..144,600,100;0,9..144,700,100;1,9..144,500,100&family=Lora:ital,wght@0,400;0,600;1,400&family=Courier+Prime:wght@400;700&display=swap">
 <style>
 html,body{margin:0}
 img{max-width:100%}
 /* Layout: one reading column with a margin rail for dates; hero pairs the name and research focus with a portrait. */
 :root{
-  --bg:#f6f8f8;
-  --surface:#ffffff;
-  --ink:#16222b;
-  --muted:#56656e;
-  --rule:#d9e1e3;
-  --accent:#1d5a6e;      /* deep harbor teal */
-  --accent-soft:#e3eef0;
-  --node:#c9862b;        /* ochre highlight for the walker */
-  --f-display:"Familjen Grotesk", "Helvetica Neue", Arial, sans-serif;
-  --f-body:"Source Serif 4", Georgia, "Times New Roman", serif;
-  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --bg:#fcfaf3;
+  --surface:#fffefa;
+  --ink:#24324a;
+  --muted:#66708a;
+  --rule:#e4dccb;
+  --accent:#3e5f8f;
+  --accent-soft:#e2e9f3;
+  --sun:#f3d98b;
+  --sun-soft:#f9edc6;
+  --sun-ink:#6e5413;
+  --mark:#f3d98b;
+  --f-display:"Fraunces", "Iowan Old Style", Georgia, serif;
+  --f-body:"Lora", Georgia, "Times New Roman", serif;
+  --f-mono:"Courier Prime", "Courier New", ui-monospace, monospace;
   --s-xs:.8125rem; --s-sm:.9375rem; --s-md:1.0625rem; --s-lg:1.375rem; --s-xl:2rem; --s-xxl:clamp(2.4rem,6vw,3.6rem);
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#0f171c; --surface:#152129; --ink:#e4ecef; --muted:#9aabb3; --rule:#26363f;
-    --accent:#7fc0d2; --accent-soft:#1a2f38; --node:#e3a650; color-scheme:dark;
+    --bg:#18222f; --surface:#1f2b3b; --ink:#f1ead8; --muted:#aab2c2; --rule:#314055;
+    --accent:#a9c1e4; --accent-soft:#273a54; --sun:#e5c86f; --sun-soft:#3b3424; --sun-ink:#f2d98a; --mark:#6a5824; color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0f171c; --surface:#152129; --ink:#e4ecef; --muted:#9aabb3; --rule:#26363f;
-  --accent:#7fc0d2; --accent-soft:#1a2f38; --node:#e3a650; color-scheme:dark;
+  --bg:#18222f; --surface:#1f2b3b; --ink:#f1ead8; --muted:#aab2c2; --rule:#314055;
+  --accent:#a9c1e4; --accent-soft:#273a54; --sun:#e5c86f; --sun-soft:#3b3424; --sun-ink:#f2d98a; --mark:#6a5824; color-scheme:dark;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -53,33 +56,34 @@ a:hover{text-decoration-thickness:2px}
 /* nav */
 nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);margin-inline:-20px;padding-inline:20px}
 nav.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px;flex-wrap:wrap}
-nav.top .brand{font-family:var(--f-display);font-weight:700;font-size:var(--s-md);color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+nav.top .brand{font-family:var(--f-display);font-weight:600;font-size:var(--s-md);color:var(--ink);text-decoration:none;letter-spacing:-.01em}
 nav.top ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap}
-nav.top ul a{font-family:var(--f-display);font-size:var(--s-sm);color:var(--muted);text-decoration:none;font-weight:500}
+nav.top ul a{font-family:var(--f-body);font-size:var(--s-sm);color:var(--muted);text-decoration:none;font-weight:500}
 nav.top ul a:hover{color:var(--accent)}
 
 /* hero */
 .hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:56px 40px}
 .eyebrow{font-family:var(--f-mono);font-size:var(--s-xs);letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
-h1{font-family:var(--f-display);font-weight:700;font-size:var(--s-xxl);line-height:1.02;letter-spacing:-.025em;margin:0 0 6px;text-wrap:balance}
-.given{font-family:var(--f-display);font-size:var(--s-lg);color:var(--muted);font-weight:500;margin:0 0 22px}
+.eyebrow::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--sun);margin-right:8px;vertical-align:1px}
+h1{font-family:var(--f-display);font-weight:600;font-size:var(--s-xxl);line-height:1.05;letter-spacing:-.015em;margin:0 0 6px;text-wrap:balance}
+h1 span{background:linear-gradient(transparent 62%,var(--mark) 62%,var(--mark) 92%,transparent 92%);padding-inline:2px}
+.given{font-family:var(--f-display);font-style:italic;font-size:var(--s-lg);color:var(--muted);font-weight:500;margin:0 0 22px}
 .lede{max-width:34em;margin:0 0 22px}
 .links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.btn{font-family:var(--f-display);font-size:var(--s-sm);font-weight:600;padding:8px 14px;border-radius:6px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.btn{font-family:var(--f-body);font-size:var(--s-sm);font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
 .btn:hover{border-color:var(--accent);color:var(--accent)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
 .btn.primary:hover{color:var(--bg);filter:brightness(1.08)}
 .email{font-family:var(--f-mono);font-size:var(--s-sm);color:var(--ink);user-select:all}
 
 .figure{margin:0}
-.portrait{width:100%;max-width:100%;aspect-ratio:640/655;object-fit:cover;display:block;border-radius:10px;border:1px solid var(--rule);background:var(--accent-soft)}
-.figure figcaption{font-family:var(--f-mono);font-size:var(--s-xs);color:var(--muted);margin-top:10px}
+.portrait{width:100%;max-width:100%;aspect-ratio:640/655;object-fit:cover;display:block;border-radius:4px;border:10px solid var(--surface);box-shadow:0 0 0 1px var(--rule),8px 8px 0 var(--sun-soft);background:var(--accent-soft);filter:saturate(.9) sepia(.08)}.figure figcaption{font-family:var(--f-mono);font-size:var(--s-xs);color:var(--muted);margin-top:10px}
 .interests{list-style:none;margin:0 0 24px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.interests li{font-family:var(--f-display);font-size:var(--s-sm);font-weight:500;padding:4px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
-
+.interests li{font-family:var(--f-body);font-size:var(--s-sm);padding:3px 12px;border-radius:999px;background:var(--sun-soft);color:var(--sun-ink);border:1px solid var(--sun)}
 /* sections */
 section{padding-block:44px;border-top:1px solid var(--rule);scroll-margin-top:64px}
-h2{font-family:var(--f-display);font-weight:700;font-size:var(--s-xl);letter-spacing:-.02em;margin:0 0 24px;line-height:1.1}
+h2{font-family:var(--f-display);font-weight:600;font-size:var(--s-xl);letter-spacing:-.02em;margin:0 0 24px;line-height:1.1}
+h2::after{content:"";display:block;width:36px;height:4px;border-radius:2px;background:var(--sun);margin-top:10px}
 h3{font-family:var(--f-display);font-weight:600;font-size:var(--s-lg);letter-spacing:-.01em;margin:0 0 6px;line-height:1.25;text-wrap:balance}
 .intro{max-width:40em;margin:-8px 0 28px;color:var(--muted)}
 
@@ -149,7 +153,7 @@ footer{font-family:var(--f-mono);font-size:var(--s-xs);color:var(--muted);paddin
   <header class="hero">
     <div>
       <p class="eyebrow">Ph.D. student · Information Systems &amp; Management · Carnegie Mellon</p>
-      <h1>Miriam Zhou</h1>
+      <h1><span>Miriam Zhou</span></h1>
       <p class="given">Xintong (Miriam) Zhou</p>
       <p class="lede">I am a first-year Ph.D. student in Information Systems and Management at Carnegie Mellon University, advised by <strong>Peter Zhang</strong> and <strong>Woody (Shixiang) Zhu</strong>. I build operations research models that guide high-stakes policy decisions in healthcare and supply chains. My work brings together optimization, stochastic modeling and equilibrium analysis with AI and machine learning, with the goal of designing systems that stay efficient, resilient and equitable under uncertainty.</p>
       <ul class="interests" aria-label="Research interests">
@@ -178,9 +182,8 @@ footer{font-family:var(--f-mono);font-size:var(--s-xs);color:var(--muted);paddin
     <ul class="rail">
       <li><span class="when">Aug 2026</span><span>Started the Ph.D. in Information Systems and Management at Carnegie Mellon University, working with Peter Zhang and Woody (Shixiang) Zhu.</span></li>
       <li><span class="when">May 2026</span><span>Graduated from Pomona College with a B.A. in Mathematics and Economics.</span></li>
-      <li><span class="when">Spring 2026</span><span>Completed my economics thesis on spatial inequality and neighborhood wage disparities in Los Angeles.</span></li>
-      <li><span class="when">Summer 2025</span><span>Named a Kenneth Cooke Math Summer Research Fellow.</span></li>
       <li><span class="when">Jan–Jun 2025</span><span>Studied abroad at Jesus College, University of Cambridge.</span></li>
+      <li><span class="when">Aug 2022</span><span>Started undergraduate studies at Pomona College in Claremont, California.</span></li>
     </ul>
   </section>
 
@@ -269,7 +272,7 @@ footer{font-family:var(--f-mono);font-size:var(--s-xs);color:var(--muted);paddin
       <div class="edu-card">
         <span class="when">2022 – 2026</span>
         <h3>Pomona College</h3>
-        <div class="meta">B.A., Mathematics and Economics</div>
+        <div class="meta">B.A., Mathematics and Economics</div><br>Advisors: Adolfo J. Rumbos</div>
         <ul>
           <li>Kenneth Cooke Math Summer Research Fellowship (2025)</li>
           <li>President’s Fund for Summer Research (2025)</li>
