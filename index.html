@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Xintong (Miriam) Zhou</title>
+<meta name="description" content="Miriam (Xintong) Zhou, Ph.D. student in Information Systems and Management at Carnegie Mellon University. Operations research for healthcare and supply chain policy.">
+<meta name="author" content="Xintong (Miriam) Zhou">
+<meta property="og:title" content="Xintong (Miriam) Zhou">
+<meta property="og:description" content="Ph.D. student at Carnegie Mellon University working on operations research for healthcare and supply chain policy.">
+<meta property="og:image" content="images/photo.jpg">
+<link rel="icon" href="images/photo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+html,body{margin:0}
+img{max-width:100%}
+/* Layout: one reading column with a margin rail for dates; hero pairs the name and research focus with a portrait. */
+:root{
+  --bg:#f6f8f8;
+  --surface:#ffffff;
+  --ink:#16222b;
+  --muted:#56656e;
+  --rule:#d9e1e3;
+  --accent:#1d5a6e;      /* deep harbor teal */
+  --accent-soft:#e3eef0;
+  --node:#c9862b;        /* ochre highlight for the walker */
+  --f-display:"Familjen Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --f-body:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --s-xs:.8125rem; --s-sm:.9375rem; --s-md:1.0625rem; --s-lg:1.375rem; --s-xl:2rem; --s-xxl:clamp(2.4rem,6vw,3.6rem);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f171c; --surface:#152129; --ink:#e4ecef; --muted:#9aabb3; --rule:#26363f;
+    --accent:#7fc0d2; --accent-soft:#1a2f38; --node:#e3a650; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f171c; --surface:#152129; --ink:#e4ecef; --muted:#9aabb3; --rule:#26363f;
+  --accent:#7fc0d2; --accent-soft:#1a2f38; --node:#e3a650; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:var(--s-md);line-height:1.6;padding-inline:20px;padding-block:0 64px}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:920px;margin-inline:auto}
+
+/* nav */
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);margin-inline:-20px;padding-inline:20px}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px;flex-wrap:wrap}
+nav.top .brand{font-family:var(--f-display);font-weight:700;font-size:var(--s-md);color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+nav.top ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap}
+nav.top ul a{font-family:var(--f-display);font-size:var(--s-sm);color:var(--muted);text-decoration:none;font-weight:500}
+nav.top ul a:hover{color:var(--accent)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:56px 40px}
+.eyebrow{font-family:var(--f-mono);font-size:var(--s-xs);letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+h1{font-family:var(--f-display);font-weight:700;font-size:var(--s-xxl);line-height:1.02;letter-spacing:-.025em;margin:0 0 6px;text-wrap:balance}
+.given{font-family:var(--f-display);font-size:var(--s-lg);color:var(--muted);font-weight:500;margin:0 0 22px}
+.lede{max-width:34em;margin:0 0 22px}
+.links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn{font-family:var(--f-display);font-size:var(--s-sm);font-weight:600;padding:8px 14px;border-radius:6px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.btn.primary:hover{color:var(--bg);filter:brightness(1.08)}
+.email{font-family:var(--f-mono);font-size:var(--s-sm);color:var(--ink);user-select:all}
+
+.figure{margin:0}
+.portrait{width:100%;max-width:100%;aspect-ratio:640/655;object-fit:cover;display:block;border-radius:10px;border:1px solid var(--rule);background:var(--accent-soft)}
+.figure figcaption{font-family:var(--f-mono);font-size:var(--s-xs);color:var(--muted);margin-top:10px}
+.interests{list-style:none;margin:0 0 24px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.interests li{font-family:var(--f-display);font-size:var(--s-sm);font-weight:500;padding:4px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+
+/* sections */
+section{padding-block:44px;border-top:1px solid var(--rule);scroll-margin-top:64px}
+h2{font-family:var(--f-display);font-weight:700;font-size:var(--s-xl);letter-spacing:-.02em;margin:0 0 24px;line-height:1.1}
+h3{font-family:var(--f-display);font-weight:600;font-size:var(--s-lg);letter-spacing:-.01em;margin:0 0 6px;line-height:1.25;text-wrap:balance}
+.intro{max-width:40em;margin:-8px 0 28px;color:var(--muted)}
+
+/* rail list: date in the margin */
+.rail{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.rail li{display:grid;grid-template-columns:8.5rem minmax(0,1fr);gap:20px;align-items:baseline}
+.when{font-family:var(--f-mono);font-size:var(--s-xs);color:var(--muted);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+
+/* research themes */
+.theme{margin-bottom:36px}
+.theme:last-child{margin-bottom:0}
+.theme-label{font-family:var(--f-mono);font-size:var(--s-xs);text-transform:uppercase;letter-spacing:.07em;color:var(--accent);margin:0 0 16px;padding-bottom:8px;border-bottom:1px dashed var(--rule)}
+.project{display:grid;grid-template-columns:8.5rem minmax(0,1fr);gap:20px;padding-block:14px}
+.project + .project{border-top:1px solid var(--rule)}
+.project p{margin:6px 0 0;max-width:40em}
+.meta{font-size:var(--s-sm);color:var(--muted);margin-top:2px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{font-family:var(--f-mono);font-size:.75rem;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.chip.out{background:transparent;border:1px solid var(--rule);color:var(--muted)}
+
+/* talks */
+.talk-title{font-style:italic}
+
+/* education */
+.edu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.edu-card{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:20px}
+.edu-card .when{display:block;margin-bottom:8px}
+.edu-card ul{margin:10px 0 0;padding-left:1.1em;font-size:var(--s-sm)}
+.edu-card li{margin-bottom:4px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 32px;margin:0}
+.skills dt{font-family:var(--f-mono);font-size:var(--s-xs);text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:6px}
+.skills dd{margin:0;font-size:var(--s-sm)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
+.contact p{margin:0;max-width:36em}
+.copy-note{font-family:var(--f-mono);font-size:var(--s-xs);color:var(--accent);min-height:1.2em}
+footer{font-family:var(--f-mono);font-size:var(--s-xs);color:var(--muted);padding-top:28px;border-top:1px solid var(--rule)}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding-block:36px 28px;gap:28px}
+  .figure{max-width:420px}
+  .rail li,.project{grid-template-columns:1fr;gap:4px}
+  .edu,.skills{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr}
+  nav.top ul{gap:14px}
+}
+</style>
+
+</head>
+<body>
+<nav class="top" aria-label="Sections">
+  <div class="wrap">
+    <a class="brand" href="#top">Miriam Zhou</a>
+    <ul>
+      <li><a href="#news">News</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Ph.D. student · Information Systems &amp; Management · Carnegie Mellon</p>
+      <h1>Miriam Zhou</h1>
+      <p class="given">Xintong (Miriam) Zhou</p>
+      <p class="lede">I am a first-year Ph.D. student in Information Systems and Management at Carnegie Mellon University, advised by <strong>Peter Zhang</strong> and <strong>Woody (Shixiang) Zhu</strong>. I build operations research models that guide high-stakes policy decisions in healthcare and supply chains. My work brings together optimization, stochastic modeling and equilibrium analysis with AI and machine learning, with the goal of designing systems that stay efficient, resilient and equitable under uncertainty.</p>
+      <ul class="interests" aria-label="Research interests">
+        <li>Operations research</li>
+        <li>Healthcare policy</li>
+        <li>Supply chain resilience</li>
+        <li>AI &amp; ML for decision-making</li>
+      </ul>
+      <div class="links">
+        <button class="btn primary" type="button" id="copy-email">Copy email</button>
+        <span class="email">miriamz@andrew.cmu.edu</span>
+      </div>
+      <div class="links" style="margin-top:12px">
+        <a class="btn" href="https://www.linkedin.com/in/miriam-zhou-67495b265" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn" href="#research">Research</a>
+      </div>
+      <p class="copy-note" id="copy-note" aria-live="polite"></p>
+    </div>
+    <figure class="figure">
+      <img class="portrait" src="images/photo.jpg" alt="Portrait of Miriam Zhou smiling outdoors in front of trees">
+    </figure>
+  </header>
+
+  <section id="news" aria-labelledby="news-h">
+    <h2 id="news-h">News</h2>
+    <ul class="rail">
+      <li><span class="when">Aug 2026</span><span>Started the Ph.D. in Information Systems and Management at Carnegie Mellon University, working with Peter Zhang and Woody (Shixiang) Zhu.</span></li>
+      <li><span class="when">May 2026</span><span>Graduated from Pomona College with a B.A. in Mathematics and Economics.</span></li>
+      <li><span class="when">Spring 2026</span><span>Completed my economics thesis on spatial inequality and neighborhood wage disparities in Los Angeles.</span></li>
+      <li><span class="when">Summer 2025</span><span>Named a Kenneth Cooke Math Summer Research Fellow.</span></li>
+      <li><span class="when">Jan–Jun 2025</span><span>Studied abroad at Jesus College, University of Cambridge.</span></li>
+    </ul>
+  </section>
+
+  <section id="research" aria-labelledby="research-h">
+    <h2 id="research-h">Research</h2>
+    <p class="intro">Selected projects from my undergraduate work at Pomona College and the Claremont Colleges, grouped by theme.</p>
+
+    <div class="theme">
+      <p class="theme-label">Supply chains &amp; networks</p>
+
+      <article class="project">
+        <span class="when">Jun–Aug 2025</span>
+        <div>
+          <h3>Pandemic-induced supply chain network optimization</h3>
+          <div class="meta">Kenneth Cooke Summer Research Fellowship · Advisor: Adolfo J. Rumbos</div>
+          <p>A multi-tier equilibrium model of global supply chains built on variational inequality theory, extended with stochastic demand and costs. It shows how cost asymmetries and uncertainty amplify inefficiency when decisions are decentralized.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <span class="when">May–Jul 2024</span>
+        <div>
+          <h3>Graph Laplacians and network connectivity</h3>
+          <div class="meta">Pomona College · Advisor: Adolfo J. Rumbos</div>
+          <p>How Laplacian eigenvalues and algebraic connectivity relate to the mixing time of random walks, studied through spectral decomposition and simulation in Python.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="theme">
+      <p class="theme-label">Healthcare &amp; public policy</p>
+
+      <article class="project">
+        <span class="when">2025–2026</span>
+        <div>
+          <h3>Modeling measles dynamics and vaccination policy impacts</h3>
+          <div class="meta">MuddOR Lab, Harvey Mudd College · Advisors: Susan Martonosi, Banafsheh Behzad, Ruben A. Proano</div>
+          <p>How socioeconomic disparities and vaccine hesitancy shape outbreak intensity across North America. Uninsured rates strongly predict outbreak intensity in the U.S., while behavioral and access factors dominate in Canada.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <span class="when">May–Jun 2025</span>
+        <div>
+          <h3>Vote-by-mail reversal and partisan and minority participation</h3>
+          <div class="meta">Claremont McKenna College Policy Lab · Advisor: Zachary Courser</div>
+          <p>Processed 3 TB of voter registration records on a high-performance computing cluster to find inconsistencies and demographic anomalies that bias election policy analysis.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="theme">
+      <p class="theme-label">Applied econometrics</p>
+
+      <article class="project">
+        <span class="when">Jan–May 2026</span>
+        <div>
+          <h3>Spatial inequality and neighborhood wage disparities in Los Angeles</h3>
+          <div class="meta">Senior thesis, Pomona College · Advisor: Fernando Lozano</div>
+          <p>A tract-level study of LA County combining ACS, county income and GIS data with geographic fixed effects. Education, poverty and labor-market conditions explain much of the variation, but localized disparities persist.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <span class="when">May–Jun 2025</span>
+        <div>
+          <h3>The Big Mac Index as a proxy for food-sector inflation</h3>
+          <div class="meta">Pomona College · Advisor: Kyle Wilson</div>
+          <p>A 2012–2025 panel for the U.S., China and Malaysia, estimated with OLS and Newey–West errors. Big Mac prices track fast-food inflation in the U.S. but diverge elsewhere because of structural pricing differences.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="education" aria-labelledby="edu-h">
+    <h2 id="edu-h">Education</h2>
+    <div class="edu">
+      <div class="edu-card">
+        <span class="when">2026 – present</span>
+        <h3>Carnegie Mellon University</h3>
+        <div class="meta">Ph.D., Information Systems and Management<br>Advisors: Peter Zhang, Woody (Shixiang) Zhu</div>
+        <ul>
+          <li>Coursework: Machine Learning, Econometrics, Linear Programming Theory</li>
+        </ul>
+      </div>
+      <div class="edu-card">
+        <span class="when">2022 – 2026</span>
+        <h3>Pomona College</h3>
+        <div class="meta">B.A., Mathematics and Economics</div>
+        <ul>
+          <li>Kenneth Cooke Math Summer Research Fellowship (2025)</li>
+          <li>President’s Fund for Summer Research (2025)</li>
+          <li>Pomona College Scholar (2024)</li>
+          <li>Visiting student, Jesus College, Cambridge (2025)</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:40px;margin-bottom:18px">Methods &amp; tools</h3>
+    <dl class="skills">
+      <div><dt>Modeling &amp; optimization</dt><dd>Variational inequalities, convex and stochastic optimization, game theory, network equilibrium</dd></div>
+      <div><dt>Data &amp; inference</dt><dd>Econometrics, time series, Monte Carlo and agent-based simulation, machine learning</dd></div>
+      <div><dt>Languages</dt><dd>R, Python, SQL, Stata, Java</dd></div>
+      <div><dt>Tools</dt><dd>AMPL, Gurobi, LaTeX, tidyverse, pandas, SymPy, ggplot2, Power BI</dd></div>
+    </dl>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Contact</h2>
+    <div class="contact">
+      <p>I’m happy to talk about operations research, healthcare and supply chain policy, or possible collaborations. Email is the best way to reach me: <span class="email">miriamz@andrew.cmu.edu</span></p>
+      <a class="btn" href="https://www.linkedin.com/in/miriam-zhou-67495b265" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </section>
+
+  <footer>Pittsburgh, PA · Updated October 2026</footer>
+</main>
+
+<script>
+(function(){
+  // copy email
+  var btn=document.getElementById('copy-email'), note=document.getElementById('copy-note');
+  btn.addEventListener('click',function(){
+    var addr='miriamz@andrew.cmu.edu';
+    function done(msg){note.textContent=msg;setTimeout(function(){note.textContent='';},2500);}
+    try{
+      navigator.clipboard.writeText(addr).then(function(){done('Email copied');},function(){done('Select the address to copy it');});
+    }catch(e){done('Select the address to copy it');}
+  });
+
+})();
+</script>
+</body>
+</html>
